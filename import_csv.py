@@ -4,10 +4,12 @@
 
 import csv
 import datetime
+from pathlib import Path
 
 from db import get_connection
 
-CSV_PATH = "Claudeアプリ作成/data/shops.csv"
+# 実行時のカレントディレクトリに依存しないよう、このファイルの場所を起点にする
+CSV_PATH = Path(__file__).parent / "data" / "shops.csv"
 
 # SQLインジェクション対策として、値の埋め込みには文字列連結ではなくプレースホルダ(%s)を使う
 INSERT_SQL = """
