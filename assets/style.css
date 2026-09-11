@@ -76,6 +76,27 @@
   font-size: 2rem;
 }
 
+/* ---- スマホ幅（640px以下）ではヒーロー写真を低くする ----
+   パソコン表示（このブロックの外側の指定）はそのまま変えていない。
+   写真の実際の高さは.mofu-headerではなく.mofu-header-photoのheightで
+   決まっているため、ここを上書きしている。 */
+@media (max-width: 640px) {
+  .mofu-header-photo {
+    height: 150px !important;
+    /* 縦を150pxまで縮めると中央基準(50%)では猫とウサギの顔が見切れるため、
+       写真の上寄り(30%の位置)を基準に切り抜き、顔が残るようにする */
+    object-position: center 30% !important;
+  }
+
+  /* 写真が低くなった分、タイトルの文字も小さくして箱に収める */
+  .mofu-header-title {
+    left: 12px;
+    bottom: 10px;
+    padding: 4px 10px;
+    font-size: 1.1rem;
+  }
+}
+
 /* 葉っぱのSVGをヘッダーの箱の中に散らして配置する。
    position:absoluteでこの箱の中の好きな位置に置き、
    pointer-events:noneでクリックの邪魔をしないようにしている。
