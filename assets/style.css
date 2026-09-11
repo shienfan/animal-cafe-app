@@ -1,0 +1,170 @@
+/* =========================================================
+   いまから、もふもふ - 見た目用スタイルシート
+   config.tomlの配色設定と組み合わせて使う。
+   ========================================================= */
+
+/* ---- 色の定義 ----
+   何度も同じ色を書かなくて済むように、変数として名前を付けている。
+   config.tomlのprimaryColor/textColorと同じ値をここでも使う。 */
+:root {
+  --mofu-primary: #C7664B; /* メインのテラコッタ色（ボタンやスコアバーなど） */
+  --mofu-text: #5C4033;    /* 文字の色 */
+  --mofu-card-bg: #F5E6DA; /* カードなどの背景色 */
+  --mofu-border: #E6CDBB;  /* 枠線の色 */
+  --mofu-leaf: #7C9A6E;    /* 葉っぱの色（緑） */
+}
+
+/* ---- フォントを丸ゴシックに変更 ----
+   Googleフォントの「Zen Maru Gothic」を読み込んで、サイト全体に適用する。
+   Streamlit自体が持っている文字スタイルより後から効かせたいので、
+   !important（他のCSSより必ず優先する、という指定）を付けている。 */
+@import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap');
+
+.stApp, .stApp * {
+  font-family: 'Zen Maru Gothic', sans-serif !important;
+}
+
+/* アイコン記号だけは丸ゴシックにすると表示が崩れるので、元のアイコン用フォントに戻す */
+[data-testid="stIconMaterial"] {
+  font-family: 'Material Symbols Rounded' !important;
+}
+
+/* ---- レイアウトの幅 ----
+   layout="wide"で画面いっぱいを使えるようにした上で、
+   中身(ヘッダー・カードなど)は900pxで折り返して、間延びしないようにする。
+   中央寄せにするためmargin: 0 autoを付けている。 */
+[data-testid="stMainBlockContainer"] {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* =========================================================
+   ヘッダー（ページ最上部の写真＋タイトル）専用のスタイル。
+   クラス名を"mofu-header-"で始めているので、他の場所には影響しない。
+   ========================================================= */
+.mofu-header {
+  position: relative;   /* この箱を基準に、葉っぱやタイトルを重ねて配置するため */
+  overflow: hidden;     /* 写真の角を丸めたときに、はみ出た部分を隠すため */
+  border-radius: 20px;
+  margin-bottom: 16px;
+}
+
+/* 写真は横幅いっぱいに広げ、決めた高さに収まるよう切り抜いて表示する。
+   object-fit: coverで、縦横比を保ったまま高さ320pxを埋めるように切り抜く。
+   Streamlitの画像にはデフォルトでobject-fit: scale-downが指定されており、
+   それより優先させる必要があるので!importantを付けている。 */
+.mofu-header-photo {
+  display: block;
+  width: 100% !important;
+  height: 320px !important;
+  object-fit: cover !important;
+}
+
+/* タイトルは写真の上に重ねて表示する。半透明の黒帯を敷いて読みやすくする。
+   写真の高さを320pxに広げた分、下からの余白(bottom)も少し広めにとっている。
+   見出しタグ(h1)を使うとStreamlit標準の見出しスタイルに上書きされてしまうため、
+   Python側ではh1ではなくdivタグでこのクラスを付けている。 */
+.mofu-header-title {
+  position: absolute;
+  left: 24px;
+  bottom: 28px;
+  margin: 0;
+  padding: 8px 16px;
+  color: #FFFFFF;
+  background: rgba(0, 0, 0, 0.35);
+  border-radius: 10px;
+  font-size: 2rem;
+}
+
+/* 葉っぱのSVGをヘッダーの箱の中に散らして配置する。
+   position:absoluteでこの箱の中の好きな位置に置き、
+   pointer-events:noneでクリックの邪魔をしないようにしている。
+   大きさ(width)と向き(rotate)を1枚ずつ変えて、自然な散らばりに見せている。 */
+.mofu-header-leaf {
+  position: absolute;
+  pointer-events: none;
+  color: var(--mofu-leaf);
+  opacity: 0.85;
+}
+.mofu-header-leaf svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.mofu-header-leaf-1 { top: 14px;    left: 16px;  width: 46px; transform: rotate(-20deg); }
+.mofu-header-leaf-2 { top: 18px;    right: 18px; width: 38px; transform: rotate(25deg); }
+.mofu-header-leaf-3 { bottom: 14px; left: 42%;   width: 52px; transform: rotate(150deg); }
+.mofu-header-leaf-4 { bottom: 10px; right: 10%;  width: 34px; transform: rotate(-45deg); }
+
+/* =========================================================
+   フッター（ページ最下部）の葉っぱ装飾。
+   ヘッダーと同じ考え方：箱にposition:relative、葉にpointer-events:none。
+   ========================================================= */
+.mofu-footer {
+  position: relative;
+  min-height: 90px; /* 葉っぱを置くための高さを確保する */
+  margin-top: 24px;
+}
+/* 大きさ・角度・不透明度を1枚ずつ変えて、8枚を少し重なるように散らしている。
+   不透明度は0.9〜1.0にして、以前より緑をはっきり見せている。 */
+.mofu-footer-leaf {
+  position: absolute;
+  pointer-events: none;
+  color: var(--mofu-leaf);
+}
+.mofu-footer-leaf svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.mofu-footer-leaf-1 { top: 0;   left: 4%;  width: 46px; transform: rotate(-25deg); opacity: 0.95; }
+.mofu-footer-leaf-2 { top: 20px; left: 12%; width: 30px; transform: rotate(50deg);  opacity: 1; }
+.mofu-footer-leaf-3 { top: 4px;  left: 26%; width: 56px; transform: rotate(-70deg); opacity: 0.9; }
+.mofu-footer-leaf-4 { top: 32px; left: 40%; width: 34px; transform: rotate(110deg); opacity: 1; }
+.mofu-footer-leaf-5 { top: 0;    left: 52%; width: 48px; transform: rotate(15deg);  opacity: 0.9; }
+.mofu-footer-leaf-6 { top: 26px; left: 64%; width: 30px; transform: rotate(-110deg); opacity: 1; }
+.mofu-footer-leaf-7 { top: 6px;  left: 76%; width: 58px; transform: rotate(65deg);  opacity: 0.9; }
+.mofu-footer-leaf-8 { top: 28px; left: 88%; width: 34px; transform: rotate(-40deg); opacity: 1; }
+
+/* =========================================================
+   カード（お店ごとの表示枠）のスタイル。
+   ========================================================= */
+.mofu-card {
+  border: 1px solid var(--mofu-border);
+  border-radius: 16px;
+  padding: 16px;
+  margin-bottom: 12px;
+  background: var(--mofu-card-bg);
+}
+.mofu-card.top {
+  border: 3px solid var(--mofu-primary); /* 1位のカードだけ枠を太くする */
+}
+.mofu-card-rank {
+  font-size: 14px;
+  color: var(--mofu-text);
+}
+.mofu-card-name {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 2px 0;
+}
+.mofu-card-meta {
+  font-size: 14px;
+  color: var(--mofu-text);
+}
+.mofu-card-score {
+  font-size: 16px;
+  margin-top: 8px;
+}
+.mofu-bar {
+  background: #FFFFFF;
+  border: 1px solid var(--mofu-border);
+  border-radius: 6px;
+  height: 10px;
+  margin-top: 4px;
+  overflow: hidden;
+}
+.mofu-bar-fill {
+  background: var(--mofu-primary);
+  height: 10px;
+}

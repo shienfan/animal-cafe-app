@@ -4,8 +4,8 @@
     {
       "name": "animal-cafe-app",
       "runtimeExecutable": "streamlit",
-      "runtimeArgs": ["run", "app.py", "--server.headless", "true"],
-      "port": 8501
+      "runtimeArgs": ["run", "app.py", "--server.headless", "true", "--server.port", "8502"],
+      "port": 8502
     }
   ]
 }

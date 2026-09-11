@@ -1,0 +1,38 @@
+﻿include,name,animal,address,area,walk_min,price_30min,contact_level,animal_count,quietness,open_time,close_time,latitude,longitude,official_url,source_url,memo
+yes,Café & zakka mattari,うさぎ,〒231-0804 神奈川県横浜市中区本牧宮原２−６ 本牧シーサイドプラザ,,,,,,,,,35.4282664,139.6653981,,https://animal-cafe.com/cafe/ChIJn_XhD-pdGGARp4WYZfgUby8,Google情報と一致
+yes,Cafe fuwafuwa,その他,〒225-0024 神奈川県横浜市青葉区市ケ尾町１１６２−１ ファミリーコーポ市ヶ尾 309,,,,,,,,,35.5528618,139.5411096,,https://animal-cafe.com/cafe/ChIJy6LYo5v3GGAR-uNsv2-IWZE,要確認(名前の一致度が低い)
+yes,"Capybara Cafe ""Capybara Land"" PUIPUI",カピバラ,〒224-0007 神奈川県横浜市都筑区荏田南５丁目８−１３ みずきフード,,,,,,,,,35.5482061,139.5608733,,https://animal-cafe.com/cafe/2664353,Google情報と一致
+yes,HARRY横浜中華街店,ハリネズミ,神奈川県横浜市中区山下町103-3 M'sPort 2F,,,,,,,,,35.4424533,139.6481187,https://harinezumi-cafe.com/store/yokohama-chukagai/,https://animal-cafe.com/cafe/ChIJ6fMoNsFdGGARETKWE-SojaE,確認済み
+yes,Owl Cafe Fukurai Tower Honmoku store (birds of prey expert),フクロウ,〒232-0035 神奈川県横浜市南区平楽１５７,,,,,,,,,35.4289889,139.6289412,,https://animal-cafe.com/cafe/2662656,要確認(Googleで見つからず)
+yes,アートギャラリー OWL(アウル),フクロウ,〒231-0868 神奈川県横浜市中区石川町１丁目54−５,,,,,,,,,35.4365006,139.6443333,,https://animal-cafe.com/cafe/ChIJg4mLPOdcGGARE1rPxcD9MNM,Google情報と一致
+yes,mipig cafe 横浜中華街店,ブタ,〒231-0023 神奈川県横浜市中区山下町１８８,,,,,,,,,35.4425876,139.6474119,,https://animal-cafe.com/cafe/ChIJbf6Q4dRdGGARGgLvSKHuJp4,Google情報と一致
+yes,pignic cafe yokohama,ブタ,〒231-0023 神奈川県横浜市中区山下町１０９−５,,,,,,,,,35.4418211,139.6492673,,https://animal-cafe.com/cafe/ChIJd9lzbMxdGGAR4x76s5SWOIg,Google情報と一致
+yes,小動物cafe Anima,小動物,〒231-0064 神奈川県横浜市中区野毛町３丁目１３３−６ 高文堂,,,,,,,,,35.4482684,139.6281642,,https://animal-cafe.com/cafe/2663382,Google情報と一致
+yes,animal cafe cosy,小動物ほか,〒220-0055 神奈川県横浜市西区浜松町１−１９ ハレルアナ,,,,,,,,,35.4510894,139.6128944,,https://animal-cafe.com/cafe/ChIJ-698XT9dGGAR3zlk7GRzNrE,Google情報と一致
+yes,レプタイルズリゾート（Reptiles Resort）,爬虫類,神奈川県横浜市中区本牧原32-8-2,,,,,,,,,35.427754,139.667212,https://reptiles-resort.com/,https://animal-cafe.com/cafe/ChIJt4aDJE5DGGARZh4jM90tVNg,確認済み
+yes,Ange Dogcafe,犬,〒234-0054 神奈川県横浜市港南区港南台４丁目２３ ル・パレ港南台,,,,,,,,,35.377295,139.5752444,,https://animal-cafe.com/cafe/2662664,要確認(名前の一致度が低い)
+yes,Atelier & Café Kizuna,犬,〒225-0003 神奈川県横浜市青葉区新石川２丁目３−１１,,,,,,,,,35.5752956,139.558189,,https://animal-cafe.com/cafe/ChIJ4-_0qIb3GGARcp5RT1CDrIY,要確認(名前の一致度が低い)
+yes,DOG GOODS & CAFE SHEi,犬,〒227-0045 神奈川県横浜市青葉区若草台１０−１ プラトゥモリ,,,,,,,,,35.5545656,139.5089808,,https://animal-cafe.com/cafe/ChIJ0Q1qPEL5GGAR8yETuOEIxvU,Google情報と一致
+yes,Dog Dept. Yokohama,犬,〒231-0862 神奈川県横浜市中区山手町１８４−１０,,,,,,,,,35.440501,139.6534149,,https://animal-cafe.com/cafe/ChIJfcHfBB9dGGARgLzRcqSW3w8,要確認(名前の一致度が低い)
+yes,Motomachi Dog,犬,〒231-0861 神奈川県横浜市中区元町１丁目 アルタ元町,,,,,,,,,35.4398189,139.6499917,,https://animal-cafe.com/cafe/ChIJJRbEIR5dGGARIPp3-24DpOI,要確認(Googleで見つからず)
+yes,ガーデンカフェ メープル,犬,〒244-0004 神奈川県横浜市戸塚区小雀町９０４,,,,,,,,,35.3701129,139.5179072,,https://animal-cafe.com/cafe/ChIJtSSJs0VRGGARcpDV47Ow-3w,Google情報と一致
+yes,サモエドカフェ アル 横浜中華街店,犬,〒231-0023 神奈川県横浜市中区山下町１４７,,,,,,,,,35.4430559,139.6457738,,https://animal-cafe.com/cafe/ChIJsYTcS39dGGARZIYaAWyDGAw,Google情報と一致
+yes,ドッグカフェ＆パンケーキ Latere Garden 横浜/みなとみらい,犬,〒221-0054 神奈川県横浜市神奈川区山内町１５−２,,,,,,,,,35.4681425,139.6393596,,https://animal-cafe.com/cafe/ChIJndH4sx1dGGARLfP-E33O_kM,Google情報と一致
+yes,Cat Cafe Leon,猫,〒231-0025 神奈川県横浜市中区松影町１丁目３−２ 関山ビル 2F,,,,,,,,,35.439905,139.6417027,,https://animal-cafe.com/cafe/ChIJc5MjvOVcGGARdCocu8MLpsc,要確認(名前の一致度が低い)
+yes,Cat Cafe Miysis,猫,〒231-0033 神奈川県横浜市中区長者町６丁目 ハローイセザキビル,,,,,,,,,35.4429667,139.6316379,,https://animal-cafe.com/cafe/ChIJIewDb_NcGGAR1tNr1jSBXeA,要確認(名前の一致度が低い)
+yes,Cat Cafe minette,猫,〒231-0821 神奈川県横浜市中区本牧原１２−１,,,,,,,,,35.42544609999999,139.6651862,,https://animal-cafe.com/cafe/2662654,要確認(名前の一致度が低い)
+yes,Cat cafe mfmf,猫,〒220-0073 神奈川県横浜市西区岡野１丁目６−２９ 翔's 横濱,,,,,,,,,35.4629279,139.6149092,,https://animal-cafe.com/cafe/ChIJy442FfFcGGARrLwLxIdPqOY,Google情報と一致
+yes,Cat’s Rock Bar,猫,〒231-0002 神奈川県横浜市中区海岸通１丁目１−１,,,,,,,,,35.449679,139.6431443,,https://animal-cafe.com/cafe/ChIJtU5d-vtcGGARBo4w-DuF7so,要確認(Googleで見つからず)
+yes,Neko Cafe Omusubi,猫,〒220-0004 神奈川県横浜市西区北幸２丁目１３−１,,,,,,,,,35.4646732,139.6147098,,https://animal-cafe.com/cafe/ChIJ__9rqw5cGGARNuFumXXPhUc,要確認(名前の一致度が低い)
+yes,Neko cafe Cloud,猫,〒231-0023 神奈川県横浜市中区山下町２１４−２,,,,,,,,,35.4427926,139.6435851,,https://animal-cafe.com/cafe/ChIJIez0j3hdGGAR36sRWjvBujc,要確認(名前の一致度が低い)
+yes,Nyankuru Sakuragicho,猫,〒231-0063 神奈川県横浜市中区花咲町１丁目 桜木町ビル,,,,,,,,,35.4494763,139.630605,,https://animal-cafe.com/cafe/2662660,要確認(名前の一致度が低い)
+yes,nekochan10issho,猫,〒231-0023 神奈川県横浜市中区山下町ロンシンリューズタワー,,,,,,,,,35.4423746,139.650186,,https://animal-cafe.com/cafe/ChIJ9wT6cuJdGGAR-U0VUM_YmVk,要確認(名前の一致度が低い)
+yes,保護猫VELCAT馬車道店,猫,〒231-0007 神奈川県横浜市中区弁天通３丁目 弁三ビル,,,,,,,,,35.4476902,139.6381953,,https://animal-cafe.com/cafe/ChIJCQA8drhdGGARAdok31WRqNY,Google情報と一致
+yes,保護猫の家＊ARIGATO,猫,神奈川県横浜市神奈川区六角橋6-29-16 エミネンス白楽2階・208号室,,,,,,,,,35.494744,139.6192708,https://adicotv.wixsite.com/arigato,https://animal-cafe.com/cafe/ChIJHwOmQrdeGGARY7KucDqxFqg,確認済み
+no,Party Animals,その他,神奈川県横浜市中区石川町1-19 キクヤビル2F,,,,,,,,,35.4379598,139.6442261,,https://animal-cafe.com/cafe/2662663,動物カフェか未確認
+no,Owl,フクロウ,〒231-0023 神奈川県横浜市中区山下町１８５ エル,,,,,,,,,35.4437472,139.6475969,,https://animal-cafe.com/cafe/ChIJVVXpx_xcGGAR_y0Ac6wuo0k,動物カフェか未確認
+no,Ｍ’ｓＰＯＲＴ,小動物ほか,〒231-0023 神奈川県横浜市中区山下町１０３−３ エムズポート sPORT1階,,,,,,,,,35.4424552,139.6481222,,https://animal-cafe.com/cafe/2671048,動物カフェか未確認
+no,&LATTE.,犬,神奈川県横浜市中区山下町25-14 モナニビルディング1F,,,,,,,,,35.4456714,139.6465432,,https://animal-cafe.com/cafe/ChIJg44YmWNdGGARplpZ9Y08524,ペット同伴可カフェ(ふれあい店ではない)
+no,HOLOHOLOcafe,犬,神奈川県横浜市港北区日吉7-7-3,,,,,,,,,35.5546318,139.6547746,,https://animal-cafe.com/cafe/ChIJuTeG4_BfGGARoVatzNYTQzo,ペット同伴可カフェ(ふれあい店ではない)
+no,Yokohama Kanai Cafe & Bar GLOW,犬,〒231-0041 神奈川県横浜市中区吉田町４−６,,,,,,,,,35.4456239,139.6332471,,https://animal-cafe.com/cafe/ChIJOSkPQ_RcGGAReHJyIP7hZ9A,動物カフェか未確認
+no,cafe Tasha,犬,神奈川県横浜市中区元町1-59-2,,,,,,,,,35.4397707,139.6495135,,https://animal-cafe.com/cafe/ChIJM6dxx-tdGGAR9A-BQ7j9pDQ,ペット同伴可カフェ(ふれあい店ではない)
