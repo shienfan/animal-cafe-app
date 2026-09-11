@@ -25,6 +25,7 @@ ANIMAL_EMOJI = {
 ASSETS_DIR = Path(__file__).parent / "assets"
 CSS_PATH = ASSETS_DIR / "style.css"
 HEADER_IMAGE_PATH = ASSETS_DIR / "hero" / "cat-rabbit-v2.webp"
+FOOTER_IMAGE_PATH = ASSETS_DIR / "footer" / "footer-hedgehog-owl.webp"
 DECOR_DIR = ASSETS_DIR / "decor"
 
 
@@ -60,12 +61,9 @@ def render_header():
 
 
 def render_footer():
-    # ページ最下部にも同じ葉っぱの絵を8枚散らす
-    leaves = "".join(
-        f'<span class="mofu-footer-leaf mofu-footer-leaf-{i}">{load_svg("leaf")}</span>'
-        for i in range(1, 9)
-    )
-    return f'<div class="mofu-footer">{leaves}</div>'
+    # ハリネズミとフクロウの写真を、横幅いっぱい・高さ控えめ(CSS側でmax-height指定)で表示する
+    with st.container(key="mofu_footer"):
+        st.image(str(FOOTER_IMAGE_PATH), width="stretch")
 
 
 @st.cache_data(ttl=60)
@@ -152,12 +150,12 @@ def main():
     # 重みが全て0だとスコアが意味を持たなくなるため、先に案内して終了する
     if w_contact == 0 and w_price == 0 and w_walk == 0:
         st.info("重みを1つ以上設定してください")
-        st.markdown(render_footer(), unsafe_allow_html=True)
+        render_footer()
         return
 
     if not filtered_shops:
         st.info("いま行けるお店が見つかりませんでした。条件を緩めてみてください。")
-        st.markdown(render_footer(), unsafe_allow_html=True)
+        render_footer()
         return
 
     scored_shops = calculate_scores(filtered_shops, w_contact, w_price, w_walk)
@@ -167,7 +165,7 @@ def main():
     for rank, shop in enumerate(ranked_shops, start=1):
         st.markdown(build_card_html(shop, rank, top_score), unsafe_allow_html=True)
 
-    st.markdown(render_footer(), unsafe_allow_html=True)
+    render_footer()
 
 
 if __name__ == "__main__":

@@ -60,7 +60,9 @@
   object-fit: cover !important;
 }
 
-/* タイトルは写真の上に重ねて表示する。半透明の黒帯を敷いて読みやすくする。
+/* タイトルは写真の上に重ねて表示する。背景の帯は使わず、文字に影を付けて
+   写真の上でも読めるようにする。影が濃すぎると不自然になるので、
+   薄めの黒をぼかして2回重ねる程度にとどめている。
    写真の高さを320pxに広げた分、下からの余白(bottom)も少し広めにとっている。
    見出しタグ(h1)を使うとStreamlit標準の見出しスタイルに上書きされてしまうため、
    Python側ではh1ではなくdivタグでこのクラスを付けている。 */
@@ -71,8 +73,7 @@
   margin: 0;
   padding: 8px 16px;
   color: #FFFFFF;
-  background: rgba(0, 0, 0, 0.35);
-  border-radius: 10px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6), 0 0 10px rgba(0, 0, 0, 0.4);
   font-size: 2rem;
 }
 
@@ -118,34 +119,17 @@
 .mofu-header-leaf-4 { bottom: 10px; right: 10%;  width: 34px; transform: rotate(-45deg); }
 
 /* =========================================================
-   フッター（ページ最下部）の葉っぱ装飾。
-   ヘッダーと同じ考え方：箱にposition:relative、葉にpointer-events:none。
-   ========================================================= */
-.mofu-footer {
-  position: relative;
-  min-height: 90px; /* 葉っぱを置くための高さを確保する */
-  margin-top: 24px;
-}
-/* 大きさ・角度・不透明度を1枚ずつ変えて、8枚を少し重なるように散らしている。
-   不透明度は0.9〜1.0にして、以前より緑をはっきり見せている。 */
-.mofu-footer-leaf {
-  position: absolute;
-  pointer-events: none;
-  color: var(--mofu-leaf);
-}
-.mofu-footer-leaf svg {
-  display: block;
+   フッター（ページ最下部）の写真。
+   ハリネズミとフクロウの横長写真を、st.image()で表示している。
+   st.container(key="mofu_footer")で囲むと、Streamlitがその箱に
+   "st-key-mofu_footer"というクラス名を自動で付けてくれるので、
+   それを目印にして中のimgタグだけスタイルを当てている。 */
+.st-key-mofu_footer img {
+  border-radius: 16px;
+  max-height: 120px; /* 高さを控えめに抑える */
+  object-fit: cover;
   width: 100%;
-  height: 100%;
 }
-.mofu-footer-leaf-1 { top: 0;   left: 4%;  width: 46px; transform: rotate(-25deg); opacity: 0.95; }
-.mofu-footer-leaf-2 { top: 20px; left: 12%; width: 30px; transform: rotate(50deg);  opacity: 1; }
-.mofu-footer-leaf-3 { top: 4px;  left: 26%; width: 56px; transform: rotate(-70deg); opacity: 0.9; }
-.mofu-footer-leaf-4 { top: 32px; left: 40%; width: 34px; transform: rotate(110deg); opacity: 1; }
-.mofu-footer-leaf-5 { top: 0;    left: 52%; width: 48px; transform: rotate(15deg);  opacity: 0.9; }
-.mofu-footer-leaf-6 { top: 26px; left: 64%; width: 30px; transform: rotate(-110deg); opacity: 1; }
-.mofu-footer-leaf-7 { top: 6px;  left: 76%; width: 58px; transform: rotate(65deg);  opacity: 0.9; }
-.mofu-footer-leaf-8 { top: 28px; left: 88%; width: 34px; transform: rotate(-40deg); opacity: 1; }
 
 /* =========================================================
    カード（お店ごとの表示枠）のスタイル。
